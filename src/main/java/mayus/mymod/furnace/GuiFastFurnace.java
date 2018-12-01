@@ -14,6 +14,7 @@ public class GuiFastFurnace extends GuiContainer
     private TileFastFurnace furnace;
 
     private static final ResourceLocation background = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace.png");
+    private static final ResourceLocation background_on = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn.png");
 
     public GuiFastFurnace(TileFastFurnace tileEntity, ContainerFastFurnace container) {
         super(container);
@@ -26,7 +27,13 @@ public class GuiFastFurnace extends GuiContainer
 
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
-        mc.getTextureManager().bindTexture(background);
+        boolean running = furnace.getProgress() > 0;
+        if(!running) {
+            mc.getTextureManager().bindTexture(background);
+        } else {
+            mc.getTextureManager().bindTexture(background_on);
+        }
+
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
 
