@@ -14,7 +14,11 @@ public class GuiFastFurnace extends GuiContainer
     private TileFastFurnace furnace;
 
     private static final ResourceLocation background = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace.png");
-    private static final ResourceLocation background_on = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn.png");
+    private static final ResourceLocation background_on_0_20 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_00-20.png");
+    private static final ResourceLocation background_on_20_40 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_20-40.png");
+    private static final ResourceLocation background_on_40_60 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_40-60.png");
+    private static final ResourceLocation background_on_60_80 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_60-80.png");
+    private static final ResourceLocation background_on_80_100 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_80-100.png");
 
     public GuiFastFurnace(TileFastFurnace tileEntity, ContainerFastFurnace container) {
         super(container);
@@ -27,11 +31,23 @@ public class GuiFastFurnace extends GuiContainer
 
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
-        boolean running = furnace.getProgress() > 0;
-        if(!running) {
+        int progress = furnace.getProgress();
+        int proz = (100 - ((furnace.getProgress() * 100) / 40));
+        if(progress == 0) {
             mc.getTextureManager().bindTexture(background);
         } else {
-            mc.getTextureManager().bindTexture(background_on);
+            if(proz <= 20) {
+                mc.getTextureManager().bindTexture(background_on_0_20);
+            } else if(proz <= 40) {
+                mc.getTextureManager().bindTexture(background_on_20_40);
+            } else if(proz <= 60) {
+                mc.getTextureManager().bindTexture(background_on_40_60);
+            } else if(proz <= 80) {
+                mc.getTextureManager().bindTexture(background_on_60_80);
+            } else if(proz <= 100) {
+                mc.getTextureManager().bindTexture(background_on_80_100);
+            }
+
         }
 
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
