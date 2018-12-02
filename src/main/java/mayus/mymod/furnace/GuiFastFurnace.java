@@ -6,6 +6,8 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.Collections;
+
 public class GuiFastFurnace extends GuiContainer
 {
     public static final int WIDTH = 180;
@@ -29,14 +31,12 @@ public class GuiFastFurnace extends GuiContainer
         mc.getTextureManager().bindTexture(background);
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
+        int energy = furnace.getClientEnergy();
+        drawEnergyBar(energy);
 
-        /*
-         * Rendered Strings are going here
-         */
-
-        //Progress
-        if(furnace.getProgress() > 0) {
-            drawString(mc.fontRenderer, "Progress: " + (100 - ((furnace.getProgress() * 100) / 40)) + "%", guiLeft + 10, guiTop + 50, 0xffffff);
+        if (furnace.getClientProgress() > 0) {
+            int percentage = 100 - ((furnace.getClientProgress() * 100) / 40);
+            drawString(mc.fontRenderer, "Progress: " + percentage + "%", guiLeft + 10, guiTop + 50, 0xffffff);
         }
     }
 
@@ -50,5 +50,18 @@ public class GuiFastFurnace extends GuiContainer
         super.drawScreen(mouseX, mouseY, partialTicks);
         renderHoveredToolTip(mouseX, mouseY);
 
+        if (mouseX > guiLeft + 10 && mouseX < guiLeft + 112 && mouseY > guiTop + 5 && mouseY < guiTop + 15) {
+            drawHoveringText(Collections.singletonList("Energy: " + furnace.getClientEnergy()), mouseX, mouseY, fontRenderer);
+        }
+
+
+    }
+
+    private void drawEnergyBar(int energy) {
+        drawRect(guiLeft + 10, guiTop + 5, guiLeft + 112, guiTop + 15, 0xff555555);
+        int percentage = (energy / TileFastFurnace.MAX_POWER) * 100 ;
+        for(int i = 0; i < percentage; i++) {
+            drawVerticalLine(guiLeft + 10 + 1 + i, guiTop + 5, guiTop + 14, i % 2 == 0 ? 0xffff0000 : 0xff000000);
+        }
     }
 }

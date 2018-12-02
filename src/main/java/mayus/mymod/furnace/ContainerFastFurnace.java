@@ -1,8 +1,11 @@
 package mayus.mymod.furnace;
 
 
+import mayus.mymod.network.Messages;
+import mayus.mymod.network.PacketSyncPower;
 import mayus.mymod.tools.IEnergyContainer;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.IInventory;
@@ -11,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
+import org.lwjgl.Sys;
 
 public class ContainerFastFurnace extends Container implements IEnergyContainer {
 
@@ -98,9 +102,25 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
     @Override
     public void detectAndSendChanges() {
         super.detectAndSendChanges();
+        if(!te.getWorld().isRemote) {
+            if(te.getProgress() != te.getClientProgress()) {
+                te.setClientProgress(te.getProgress());
 
-        for (IContainerListener listener : listeners) {
-            listener.sendWindowProperty(this, PROGRESS_ID, te.getProgress());
+                for (IContainerListener listener : listeners) {
+                    listener.sendWindowProperty(this, PROGRESS_ID, te.getProgress());
+                }
+            }
+
+            if(te.getEnergy() != te.getClientEnergy()) {
+                te.setClientEnergy(te.getEnergy());
+                for (IContainerListener listener : listeners) {
+                    if(listener instanceof EntityPlayerMP) {
+                        EntityPlayerMP player = (EntityPlayerMP) listener;
+                        Messages.INSTANCE.sendTo(new PacketSyncPower(te.getEnergy()), player);
+
+                    }
+                }
+            }
         }
 
     }
@@ -108,12 +128,12 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
     @Override
     public void updateProgressBar(int id, int data) {
         if(id == PROGRESS_ID) {
-            te.setProgress(data);
+            te.setClientProgress(data);
         }
     }
 
     @Override
     public void syncPower(int energy) {
-
+        te.setClientEnergy(energy);
     }
 }
