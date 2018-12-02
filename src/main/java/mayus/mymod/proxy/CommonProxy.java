@@ -7,6 +7,7 @@ import mayus.mymod.MyMod;
 import mayus.mymod.furnace.BlockFastFurnace;
 import mayus.mymod.furnace.TileFastFurnace;
 import mayus.mymod.network.Messages;
+import mayus.mymod.worldgen.BlockFancyOre;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -37,11 +38,14 @@ public class CommonProxy {
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new BlockFastFurnace());
         GameRegistry.registerTileEntity(TileFastFurnace.class, MyMod.MODID + "_fast_furnace");
+
+        event.getRegistry().register(new BlockFancyOre());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(ModBlocks.blockFastFurnace).setRegistryName(BlockFastFurnace.FAST_FURNACE));
+        event.getRegistry().register(new ItemBlock(ModBlocks.blockFancyOre).setRegistryName(BlockFancyOre.FANCY_ORE));
     }
 
     public ListenableFuture<Object> addSchedulesTaskClient(Runnable runnableToSchedule) {
