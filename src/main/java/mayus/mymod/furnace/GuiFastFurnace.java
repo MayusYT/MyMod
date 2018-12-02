@@ -6,7 +6,9 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
+
 import java.util.Collections;
+
 
 public class GuiFastFurnace extends GuiContainer
 {
@@ -15,7 +17,8 @@ public class GuiFastFurnace extends GuiContainer
 
     private TileFastFurnace furnace;
 
-    private static final ResourceLocation background = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace.png");
+    private static final ResourceLocation background_off_0 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_0.png");
+    private static final ResourceLocation background_off_1 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_1.png");
     private static final ResourceLocation background_on_0_20 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_00-20.png");
     private static final ResourceLocation background_on_20_40 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_20-40.png");
     private static final ResourceLocation background_on_40_60 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_40-60.png");
@@ -35,7 +38,12 @@ public class GuiFastFurnace extends GuiContainer
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         int proz = (100 - ((furnace.getClientProgress() * 100) / 40));
         if(furnace.getClientProgress() == 0) {
-            mc.getTextureManager().bindTexture(background);
+            if(getRandomBoolean()) {
+                mc.getTextureManager().bindTexture(background_off_0);
+            } else {
+                mc.getTextureManager().bindTexture(background_off_1);
+            }
+
         } else {
             if(proz <= 20) {
                 mc.getTextureManager().bindTexture(background_on_0_20);
@@ -85,4 +93,8 @@ public class GuiFastFurnace extends GuiContainer
             drawVerticalLine(guiLeft + 10 + 1 + i, guiTop + 5, guiTop + 14, i % 2 == 0 ? 0xffff0000 : 0xff000000);
         }
     }
+
+    public static boolean getRandomBoolean() {
+        return Math.random() < 0.5;
+     }
 }
