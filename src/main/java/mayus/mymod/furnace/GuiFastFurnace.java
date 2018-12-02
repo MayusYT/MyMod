@@ -33,9 +33,8 @@ public class GuiFastFurnace extends GuiContainer
 
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
-        int progress = furnace.getProgress();
-        int proz = (100 - ((furnace.getProgress() * 100) / 40));
-        if(progress == 0) {
+        int proz = (100 - ((furnace.getClientProgress() * 100) / 40));
+        if(furnace.getClientProgress() == 0) {
             mc.getTextureManager().bindTexture(background);
         } else {
             if(proz <= 20) {
@@ -56,11 +55,11 @@ public class GuiFastFurnace extends GuiContainer
 
         int energy = furnace.getClientEnergy();
         drawEnergyBar(energy);
-
+        /*
         if (furnace.getClientProgress() > 0) {
             int percentage = 100 - ((furnace.getClientProgress() * 100) / 40);
             drawString(mc.fontRenderer, "Progress: " + percentage + "%", guiLeft + 10, guiTop + 50, 0xffffff);
-        }
+        }*/
     }
 
 
