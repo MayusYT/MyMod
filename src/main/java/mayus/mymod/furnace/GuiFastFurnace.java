@@ -73,7 +73,7 @@ public class GuiFastFurnace extends GuiContainer
         renderHoveredToolTip(mouseX, mouseY);
 
         if (mouseX > guiLeft + 10 && mouseX < guiLeft + 112 && mouseY > guiTop + 5 && mouseY < guiTop + 15) {
-            drawHoveringText(Collections.singletonList("Energy: " + furnace.getClientEnergy()), mouseX, mouseY, fontRenderer);
+            drawHoveringText(Collections.singletonList("Energy: " + furnace.getClientEnergy() + " RF"), mouseX, mouseY, fontRenderer);
         }
 
 
