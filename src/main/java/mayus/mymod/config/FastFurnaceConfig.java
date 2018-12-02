@@ -5,7 +5,7 @@ import mayus.mymod.MyMod;
 import net.minecraftforge.common.config.Config;
 
 @Config(modid = MyMod.MODID)
-public class GeneralConfig {
+public class FastFurnaceConfig {
 
     @Config.Comment(value = "Maximum of power the Fast Furnace can hold")
     public static int MAX_POWER = 100000;

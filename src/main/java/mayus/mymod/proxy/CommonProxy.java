@@ -45,7 +45,15 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(ModBlocks.blockFastFurnace).setRegistryName(BlockFastFurnace.FAST_FURNACE));
-        event.getRegistry().register(new ItemBlock(ModBlocks.blockFancyOre).setRegistryName(BlockFancyOre.FANCY_ORE));
+        event.getRegistry().register(
+                new ItemBlock(ModBlocks.blockFancyOre) {
+                    @Override
+                    public int getMetadata(int damage) {
+                        return damage;
+                    }
+                }
+                        .setHasSubtypes(true)
+                        .setRegistryName(BlockFancyOre.FANCY_ORE));
     }
 
     public ListenableFuture<Object> addSchedulesTaskClient(Runnable runnableToSchedule) {

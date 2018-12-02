@@ -1,7 +1,7 @@
 package mayus.mymod.furnace;
 
 import mayus.mymod.MyMod;
-import mayus.mymod.config.GeneralConfig;
+import mayus.mymod.config.FastFurnaceConfig;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.ResourceLocation;
 
@@ -50,7 +50,7 @@ public class GuiFastFurnace extends GuiContainer
 
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
-        int energyPercent = ((furnace.getClientEnergy() * 100) / GeneralConfig.MAX_POWER);
+        int energyPercent = ((furnace.getClientEnergy() * 100) / FastFurnaceConfig.MAX_POWER);
         drawEnergyBar(energyPercent);
         /*
         if (furnace.getClientProgress() > 0) {

@@ -1,6 +1,6 @@
 package mayus.mymod.furnace;
 
-import mayus.mymod.config.GeneralConfig;
+import mayus.mymod.config.FastFurnaceConfig;
 import mayus.mymod.tools.MyEnergyStorage;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -40,7 +40,7 @@ public class TileFastFurnace extends TileEntity implements ITickable {
     @Override
     public void update() {
 
-        if(getClientEnergy() < GeneralConfig.RF_PER_TICK) {
+        if(getClientEnergy() < FastFurnaceConfig.RF_PER_TICK) {
             setState(FurnaceState.NOPOWER);
             return;
         }
@@ -50,7 +50,7 @@ public class TileFastFurnace extends TileEntity implements ITickable {
                 setState(FurnaceState.WORKING);
 
                 //System.out.println("Progress over 0 and State: " + getState().toString());
-                myEnergyStorage.consumePower(GeneralConfig.RF_PER_TICK);
+                myEnergyStorage.consumePower(FastFurnaceConfig.RF_PER_TICK);
                 progress--;
                 if(progress <= 0) {
                     attemptSmelt();
@@ -144,7 +144,7 @@ public class TileFastFurnace extends TileEntity implements ITickable {
             ItemStack result = FurnaceRecipes.instance().getSmeltingResult(inputHandler.getStackInSlot(i));
             if(!result.isEmpty()) {
                 if(insertOutput(result.copy(), true)) {
-                    progress = GeneralConfig.MAX_PROGRESS;
+                    progress = FastFurnaceConfig.MAX_PROGRESS;
                     markDirty();
                 }
                 break;
@@ -276,5 +276,5 @@ public class TileFastFurnace extends TileEntity implements ITickable {
         return super.getCapability(capability, facing);
     }
 
-    private MyEnergyStorage myEnergyStorage = new MyEnergyStorage(GeneralConfig.MAX_POWER, GeneralConfig.RF_PER_TICK_INPUT);
+    private MyEnergyStorage myEnergyStorage = new MyEnergyStorage(FastFurnaceConfig.MAX_POWER, FastFurnaceConfig.RF_PER_TICK_INPUT);
 }
