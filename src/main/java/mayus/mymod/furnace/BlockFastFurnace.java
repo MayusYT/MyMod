@@ -61,7 +61,12 @@ public class BlockFastFurnace extends Block implements ITileEntityProvider {
         if (!(te instanceof TileFastFurnace)) {
             return false;
         }
-        player.openGui(MyMod.instance, 0, world, pos.getX(), pos.getY(), pos.getZ());
+        if(!player.isSneaking()) {
+            player.openGui(MyMod.instance, 0, world, pos.getX(), pos.getY(), pos.getZ());
+        } else {
+            return false;
+        }
+
         return true;
     }
 
