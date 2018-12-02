@@ -1,9 +1,11 @@
+
 {
   "forge_marker": 1,
   "defaults": {
     "model": "cube",
     "textures": {
-      "north": "mymod:blocks/fast_furnace",
+      "particle": "mymod:blocks/fast_furnace_off",
+      "north": "mymod:blocks/fast_furnace_off",
       "south": "mymod:blocks/side",
       "west": "mymod:blocks/side",
       "east": "mymod:blocks/side",
@@ -21,6 +23,11 @@
       "east": {"y": 90},
       "up": {"x": -90},
       "down": {"x": 90}
+    },
+    "state": {
+      "off": {},
+      "working": { "textures": { "north": "mymod:blocks/fast_furnace_working" } },
+      "nopower": {"textures": { "north": "mymod:blocks/fast_furnace_nopower" } }
     }
   }
 }
