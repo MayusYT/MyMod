@@ -53,8 +53,8 @@ public class GuiFastFurnace extends GuiContainer
 
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
-        int energy = furnace.getClientEnergy();
-        drawEnergyBar(energy);
+        int energyPercent = ((furnace.getClientEnergy() * 100) / TileFastFurnace.MAX_POWER);
+        drawEnergyBar(energyPercent);
         /*
         if (furnace.getClientProgress() > 0) {
             int percentage = 100 - ((furnace.getClientProgress() * 100) / 40);
@@ -79,9 +79,8 @@ public class GuiFastFurnace extends GuiContainer
 
     }
 
-    private void drawEnergyBar(int energy) {
+    private void drawEnergyBar(int percentage) {
         drawRect(guiLeft + 10, guiTop + 5, guiLeft + 112, guiTop + 15, 0xff555555);
-        int percentage = (energy / TileFastFurnace.MAX_POWER) * 100 ;
         for(int i = 0; i < percentage; i++) {
             drawVerticalLine(guiLeft + 10 + 1 + i, guiTop + 5, guiTop + 14, i % 2 == 0 ? 0xffff0000 : 0xff000000);
         }
