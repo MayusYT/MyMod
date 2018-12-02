@@ -207,6 +207,11 @@ public class TileFastFurnace extends TileEntity implements ITickable {
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
+        readRestorableFromNBT(compound);
+
+    }
+
+    public void readRestorableFromNBT(NBTTagCompound compound) {
         if(compound.hasKey("itemsIn")) {
             inputHandler.deserializeNBT((NBTTagCompound) compound.getTag("itemsIn"));
         }
@@ -216,17 +221,20 @@ public class TileFastFurnace extends TileEntity implements ITickable {
 
         progress = compound.getInteger("progress");
         myEnergyStorage.setEnergy(compound.getInteger("energy"));
-
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
+        writeRestorableToNBT(compound);
+        return compound;
+    }
+
+    public void writeRestorableToNBT(NBTTagCompound compound) {
         compound.setTag("itemsIn", inputHandler.serializeNBT());
         compound.setTag("itemsOut", outputHandler.serializeNBT());
         compound.setInteger("progress", progress);
         compound.setInteger("energy", myEnergyStorage.getEnergyStored());
-        return compound;
     }
 
 

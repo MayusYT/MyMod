@@ -22,6 +22,7 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
 
     private TileFastFurnace te;
 
+
     public ContainerFastFurnace(IInventory playerInventory, TileFastFurnace te) {
         this.te = te;
 

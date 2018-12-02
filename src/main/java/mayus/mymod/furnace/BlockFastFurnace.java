@@ -14,9 +14,11 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.ChunkCache;
@@ -28,8 +30,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
-
-import static net.minecraft.block.BlockDispenser.TRIGGERED;
 
 public class BlockFastFurnace extends Block implements ITileEntityProvider {
 
@@ -55,6 +55,55 @@ public class BlockFastFurnace extends Block implements ITileEntityProvider {
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileFastFurnace();
+    }
+
+
+    @Override
+    public void getDrops(NonNullList<ItemStack> result, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+        TileEntity tileEntity = world.getTileEntity(pos);
+
+        if(tileEntity instanceof TileFastFurnace) {
+            ItemStack stack = new ItemStack(Item.getItemFromBlock(this));
+            NBTTagCompound tagCompound = new NBTTagCompound();
+            ((TileFastFurnace)tileEntity).writeRestorableToNBT(tagCompound);
+
+            stack.setTagCompound(tagCompound);
+            result.add(stack);
+        } else {
+            super.getDrops(result, world, pos, state, fortune);
+        }
+
+    }
+
+    @Override
+    public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
+        if(willHarvest) {
+            return true;
+        }
+        return super.removedByPlayer(state, world, pos, player, willHarvest);
+    }
+
+    @Override
+    public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack) {
+        super.harvestBlock(worldIn, player, pos, state, te, stack);
+        worldIn.setBlockToAir(pos);
+    }
+
+
+    @Override
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+        super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+
+        TileEntity tileEntity = worldIn.getTileEntity(pos);
+
+        if(tileEntity instanceof TileFastFurnace) {
+
+
+            NBTTagCompound tagCompound = stack.getTagCompound();
+            if(tagCompound != null) {
+                ((TileFastFurnace) tileEntity).readRestorableFromNBT(tagCompound);
+            }
+        }
     }
 
     @Override
