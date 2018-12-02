@@ -1,0 +1,437 @@
+[14:31:06] [main/INFO] [GradleStart]: Extra: []
+[14:31:06] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /home/marius/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[14:31:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:31:06] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:31:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:31:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:31:06] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2784 for Minecraft 1.12.2 loading
+[14:31:06] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_191, running on Linux:amd64:4.18.0-11-generic, installed at /usr/lib/jvm/jdk1.8.0_191/jre
+[14:31:06] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[14:31:06] [main/ERROR] [FML]: Full: /home/marius/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4/maven-artifact-3.5.3.jar
+[14:31:06] [main/ERROR] [FML]: Trimmed: /home/marius/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[14:31:06] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[14:31:06] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[14:31:07] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[14:31:07] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[14:31:07] [main/INFO] [FML]: Searching /home/marius/projects/MyMod/run/./mods for mods
+[14:31:07] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in EnderCore-1.12.2-0.5.43.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:31:07] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[14:31:07] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[14:31:07] [main/INFO] [GradleStart]: Injecting location in coremod com.enderio.core.common.transform.EnderCorePlugin
+[14:31:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:31:07] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[14:31:07] [main/INFO] [GradleStart]: Remapping AccessTransformer rules...
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:31:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:31:07] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[14:31:08] [main/INFO] [EnderCore ASM]: Transforming net.minecraft.entity.player.EntityPlayer finished, added isElytraFlying() overriding EntityLivingBase
+[14:31:08] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player214
+[14:31:09] [Client thread/INFO] [EnderCore ASM]: Transforming Class [net.minecraft.entity.ai.EntityAICreeperSwell], Method [updateTask]
+[14:31:09] [Client thread/INFO] [EnderCore ASM]: Transforming net.minecraft.entity.ai.EntityAICreeperSwell Finished.
+[14:31:09] [Client thread/INFO] [EnderCore ASM]: Transforming Class [net.minecraft.inventory.ContainerFurnace], Method [transferStackInSlot]
+[14:31:09] [Client thread/INFO] [EnderCore ASM]: Transforming net.minecraft.inventory.ContainerFurnace Finished.
+[14:31:09] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[14:31:09] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[14:31:10] [Client thread/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 4.18.0-11-generic
+	Java Version: 1.8.0_191, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 806394712 bytes (769 MB) / 899153920 bytes (857 MB) up to 3737649152 bytes (3564 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+EnderCorePlugin (EnderCore-1.12.2-0.5.43.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 390.87' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
+[14:31:10] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2784 Initialized
+[14:31:10] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[14:31:10] [Client thread/INFO] [FML]: Replaced 1036 ore ingredients
+[14:31:10] [Client thread/INFO] [FML]: Searching /home/marius/projects/MyMod/run/./mods for mods
+[14:31:11] [Client thread/INFO] [FML]: Forge Mod Loader has identified 21 mods to load
+[14:31:11] [Client thread/INFO] [FML]: FML has found a non-mod file AutoSave-1.12.2-1.0.8.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
+[14:31:11] [Client thread/INFO] [FML]: FML has found a non-mod file AutoConfig-1.12.2-1.0.1.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
+[14:31:12] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, jei, redstoneflux, theoneprobe, intwheel, mymod, endercore, enderio, enderiobase, enderioconduits, enderioconduitsappliedenergistics, enderioconduitsopencomputers, enderioconduitsrefinedstorage, enderiointegrationforestry, enderiointegrationtic, enderiointegrationticlate, enderiomachines, enderiopowertools] at CLIENT
+[14:31:12] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, jei, redstoneflux, theoneprobe, intwheel, mymod, endercore, enderio, enderiobase, enderioconduits, enderioconduitsappliedenergistics, enderioconduitsopencomputers, enderioconduitsrefinedstorage, enderiointegrationforestry, enderiointegrationtic, enderiointegrationticlate, enderiomachines, enderiopowertools] at SERVER
+[14:31:12] [Client thread/ERROR] [FML]: The mod redstoneflux is expecting signature d4f1503fbacd9b9fb767720420c5395104239ec9 for source RedstoneFlux-1.12-2.0.0.1.jar, however there is no signature matching that description
+[14:31:12] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 40327556 nanos
+[14:31:13] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Redstone Flux, FMLFileResourcePack:The One Probe, FMLFileResourcePack:Interaction Wheel, FMLFileResourcePack:My Mod, FMLFileResourcePack:EnderCore, FMLFileResourcePack:Ender IO, FMLFileResourcePack:Ender IO Base, FMLFileResourcePack:Ender IO Conduits, FMLFileResourcePack:Ender IO Applied Energistics Conduits, FMLFileResourcePack:Ender IO Open Computers Conduits, FMLFileResourcePack:Ender IO Refined Storage Conduits, FMLFileResourcePack:Ender IO Integration with Forestry, FMLFileResourcePack:Ender IO Integration with Tinkers' Construct, FMLFileResourcePack:Ender IO Integration with Tinkers' Construct, FMLFileResourcePack:Ender IO Machines, FMLFileResourcePack:Ender IO Powertools
+[14:31:13] [Client thread/INFO] [EnderCore ASM]: Transforming Class [net.minecraft.client.renderer.RenderItem], Method [renderItemAndEffectIntoGUI, renderItemOverlayIntoGUI]
+[14:31:13] [Client thread/INFO] [EnderCore ASM]: Transforming net.minecraft.client.renderer.RenderItem Finished.
+[14:31:13] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[14:31:13] [Client thread/INFO] [FML]: Found 1175 ObjectHolder annotations
+[14:31:13] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[14:31:13] [Client thread/INFO] [FML]: Found 8 ItemStackHolder annotations
+[14:31:14] [Client thread/INFO] [enderio]: Forge Energy integration loaded
+[14:31:14] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[14:31:14] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14:31:14] [Client thread/INFO] [theoneprobe]: The One Probe Detected RedstoneFlux: enabling support
+[14:31:14] [Client thread/INFO] [EnderCore Mixins]: Found annotation mixin: crazypants.enderio.conduits.me.conduit.MEMixin
+[14:31:14] [Client thread/INFO] [EnderCore Mixins]: Skipping mixin due to missing dependencies: [appliedenergistics2|API]
+[14:31:14] [Client thread/INFO] [EnderCore Mixins]: Found annotation mixin: crazypants.enderio.conduits.oc.conduit.OCMixin
+[14:31:14] [Client thread/INFO] [EnderCore Mixins]: Skipping mixin due to missing dependencies: [opencomputersapi|network]
+[14:31:14] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2794
+[14:31:15] [Client thread/WARN] [enderio]: Tinkers' Construct integration NOT loaded. Tinkers' Construct is not installed
+[14:31:15] [Client thread/WARN] [enderio]: Applied Energistics conduits NOT loaded. Applied Energistics is not installed
+[14:31:15] [Client thread/WARN] [enderio]: OpenComputers conduits NOT loaded. OpenComputers is not installed
+[14:31:15] [Client thread/WARN] [enderio]: Refined Storage conduits NOT loaded. Refined Storage is not installed
+[14:31:15] [Client thread/WARN] [enderio]: Forestry integration NOT loaded. Forestry is not installed
+[14:31:16] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `mymod_fast_furnace`, expected `mymod`. This could be a intended override, but in most cases indicates a broken mod.
+[14:31:19] [Client thread/INFO] [FML]: Applying holder lookups
+[14:31:19] [Client thread/INFO] [FML]: Holder lookups applied
+[14:31:20] [Client thread/INFO] [FML]: Applying holder lookups
+[14:31:20] [Client thread/INFO] [FML]: Holder lookups applied
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: IC2 classic integration not loaded
+[14:31:20] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `botania` for name `petals`, expected `enderio`. This could be a intended override, but in most cases indicates a broken mod.
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Botania integration for farming fully loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Natura integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: IC2 integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Extra Utilities 2 integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: TechReborn integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Immersive Engineering integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: MFR integration not loaded
+[14:31:20] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `dye`, expected `enderio`. This could be a intended override, but in most cases indicates a broken mod.
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Metallurgy integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Actually Additions integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Magicalcrops integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Botania integration for fertilizing not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Farming Station: Gardencore integration not loaded
+[14:31:20] [Client thread/INFO] [enderio]: Dark Steel Upgrades: TOP integration loaded
+[14:31:20] [Client thread/INFO] [FML]: Applying holder lookups
+[14:31:20] [Client thread/INFO] [FML]: Holder lookups applied
+[14:31:20] [Client thread/INFO] [FML]: Applying holder lookups
+[14:31:20] [Client thread/INFO] [FML]: Holder lookups applied
+[14:31:20] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:31:20] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:31:20] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[14:31:20] [Thread-4/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[14:31:20] [Thread-4/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:31:20] [Thread-4/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[14:31:21] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[14:31:22] [Client thread/INFO] [FML]: Max texture size: 16384
+[14:31:22] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 1024x512 textures-atlas
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:22] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:23] [Client thread/ERROR] [FML]: MultiModel minecraft:builtin/missing is empty (no base model or parts were provided/resolved)
+[14:31:24] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `enderio` for name `capbank_basic2normal`, expected `enderiopowertools`. This could be a intended override, but in most cases indicates a broken mod.
+[14:31:24] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `enderio` for name `capbank_normal2vibrant`, expected `enderiopowertools`. This could be a intended override, but in most cases indicates a broken mod.
+[14:31:24] [Client thread/INFO] [FML]: Applying holder lookups
+[14:31:24] [Client thread/INFO] [FML]: Holder lookups applied
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler SpecialTooltipHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler EnchantTooltipHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler FireworkHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler FluidSpawnHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler OreDictTooltipHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler JoinMessageHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler RightClickCropHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler ClientHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler AutoSmeltHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler XPBoostHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler FluidVisualsHandler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: [Handlers] Registering handler Scheduler to busses: [FORGE]
+[14:31:24] [Client thread/INFO] [EnderCore]: Sending dummy event to all mods
+[14:31:24] [Client thread/INFO] [EnderCore]: Reloading ingame configs for modid: endercore
+[14:31:24] [Client thread/INFO] [enderio]: Updating config...
+[14:31:24] [Client thread/INFO] [enderio]: Updating config...
+[14:31:24] [Client thread/INFO] [enderio]: Updating config...
+[14:31:24] [Client thread/INFO] [enderio]: Updating config...
+[14:31:24] [Client thread/INFO] [enderio]: Updating config...
+[14:31:24] [Client thread/INFO] [enderio]: Sending whitelist message to Chisel and Bits for block blockDecoration1
+[14:31:24] [Client thread/INFO] [enderio]: Sending whitelist message to Chisel and Bits for block blockDecoration2
+[14:31:24] [Client thread/INFO] [enderio]: Sending whitelist message to Chisel and Bits for block blockDecoration3
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_dark_steel_anvil
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_basic_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_advanced_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_limited_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_big_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_big_advanced_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_existing_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_mod_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_power_item_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_soul_filter_normal
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_soul_filter_big
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_fluid_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_not_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_or_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_and_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_nor_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_nand_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_xor_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_xnor_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_toggle_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_counting_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_sensor_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.item_redstone_timer_filter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_conduit_bundle
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_simple_furnace
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_simple_alloy_smelter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_alloy_smelter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_enhanced_alloy_smelter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_buffer
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_enchanter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_farm_station
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_combustion_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_enhanced_combustion_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_simple_stirling_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_stirling_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_zombie_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_franken_zombie_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_ender_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_lava_generator
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_killer_joe
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_attractor_obelisk
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_aversion_obelisk
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_inhibitor_obelisk
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_relocator_obelisk
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_weather_obelisk
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_experience_obelisk
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_painter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_simple_sag_mill
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_sag_mill
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_enhanced_sag_mill
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_slice_and_splice
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_soul_binder
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_powered_spawner
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_vat
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_enhanced_vat
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_wired_charger
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_enhanced_wired_charger
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_simple_wired_charger
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_tank
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_transceiver
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_vacuum_chest
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_xp_vacuum
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_travel_anchor
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_tele_pad
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_dialing_device
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_impulse_hopper
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_crafter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_simple_crafter
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_creative_spawner
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_cap_bank
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_power_monitor
+[14:31:24] [Client thread/INFO] [enderio]: Registered permission enderio.gui.block_advanced_power_monitor
+[14:31:24] [Client thread/INFO] [enderio]: Enabled support for The One Probe
+[14:31:24] [Client thread/INFO] [enderio]: Processing IMC message recipe:xml from endercore
+[14:31:24] [Client thread/INFO] [enderio]: Processing IMC message recipe:xml from endercore
+[14:31:24] [Client thread/INFO] [enderio]: Reading user recipe file user_recipes.xml
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:concussioncreeper'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:direslime'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:direwolf'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:enderminy'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:fallenknight'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:fallenmount'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:owl'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:withercat'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'enderzoo:witherwitch'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'chickens:chickenschicken'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'thermalfoundation:blizz'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'thermalfoundation:basalz'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'thermalfoundation:blitz'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'industrialforegoing:pink_slime'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:firedragon'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:icedragon'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:icevillager'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:hippogryph'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:gorgon'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:if_pixie'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:cyclops'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'iceandfire:hippogryph'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'matteroverdrive:rogue_android'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'matteroverdrive:mad_scientist'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'matteroverdrive:mutant_scientist'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'meecreeps:meecreeps'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:chameleon'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:treasure_slime'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:haunted_tool'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:grovesprite'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:bewitched_tome'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:filch_lizard'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:brain_slime'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:rocket_creeper'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:festive_creeper'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:support_creeper'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:skeleton_warrior'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:blazing_juggernaut'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:lily_lurker'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:mother_spider'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:baby_spider'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:trollager'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:lost_miner'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:traveling_merchant'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:dodo'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'primitivemobs:mimic'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'quark:pirate'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'quark:wraith'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'quark:dweller'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'quark:ashen'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'tconstruct:blueslime'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'totemic:buffalo'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'totemic:baykok'
+[14:31:25] [Client thread/INFO] [enderio]: Could not find an entity for 'totemic:bald_eagle'
+[14:31:25] [Client thread/INFO] [enderio]: Valid IMC recipes to be processed:
+[14:31:25] [Client thread/INFO] [enderio]:  * Enchanter: endercore:xpboost from IMC from mod 'endercore'
+[14:31:25] [Client thread/INFO] [enderio]:  * Enchanter: endercore:autosmelt from IMC from mod 'endercore'
+[14:31:25] [Client thread/INFO] [enderio]: Reading user recipe file user_recipes.xml
+[14:31:25] [Client thread/INFO] [enderio]: Created 6 synthetic recipes for 3xitem.item_material@38 => 1xitem.item_material@3
+[14:31:25] [Client thread/INFO] [enderio]: Created 6 synthetic recipes for 4xitem.netherquartz@0 => 1xtile.block_fused_quartz@0
+[14:31:25] [Client thread/INFO] [enderio]: Created 6 synthetic recipes for 1xtile.quartzBlock@0 => 1xtile.block_fused_quartz@0
+[14:31:25] [Client thread/INFO] [enderio]: Created 6 synthetic recipes for 1xtile.glass@0 => 1xtile.block_fused_glass@0
+[14:31:25] [Client thread/INFO] [enderio]: Created 6 synthetic recipes for 1xtile.sapling@0 => 1xtile.deadbush@0
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/INFO] [enderio]: Created 6 synthetic recipes for 9xitem.item_material@28 => 1xitem.enderPearl@0
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/WARN] [enderio]: TiC recipe is active, but TiC integration is not loaded
+[14:31:25] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:31:25] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:31:25] [Client thread/WARN] [enderio]: Could not find Build Craft Wrench definition. Wrench integration with other mods may fail
+[14:31:25] [Client thread/INFO] [jei]: Starting JEI...
+[14:31:27] [Client thread/INFO] [jei]: Registering recipe categories...
+[14:31:27] [Client thread/INFO] [jei]: Registering recipe categories took 20.03 ms
+[14:31:27] [Client thread/INFO] [jei]: Registering mod plugins...
+[14:31:27] [Client thread/INFO] [enderio]: DarkSteelUpgradeRecipeCategory: Added 8752 dark steel upgrade recipes and 28265 enchantment recipes for upgradable items to JEI in 0.541 seconds.
+[14:31:27] [Client thread/INFO] [enderio]: InfinityRecipeCategory: Added 2 infinity recipe(s) to JEI in 0.018 seconds.
+[14:31:27] [Client thread/INFO] [enderio]: AlloyRecipeCategory: Added 119 alloy smelter recipes to JEI in 0.008 seconds.
+[14:31:27] [Client thread/INFO] [enderio]: CombustionRecipeCategory: Added 6 combustion generator recipes to JEI in 0.006 seconds.
+[14:31:28] [Client thread/INFO] [jei]: Added recipe registry plugin: class crazypants.enderio.machines.integration.jei.PainterRegistryPlugin
+[14:31:28] [Client thread/INFO] [enderio]: StirlingRecipeCategory: Added 10 stirling generator recipes for 130 solid fuels to JEI in 0.009 seconds.
+[14:31:28] [Client thread/INFO] [enderio]: TankRecipeCategory: Added 153 tank recipes to JEI in 0.014 seconds.
+[14:31:28] [Client thread/INFO] [enderio]: WiredChargerRecipeCategory: Added 19 item charging recipes to JEI in 0.029 seconds.
+[14:31:28] [Client thread/INFO] [enderio]: WeatherObeliskRecipeCategory: Added 3 weather changing recipes to JEI in 0.002 seconds.
+[14:31:28] [Client thread/INFO] [jei]: Registering mod plugins took 1.018 s
+[14:31:28] [Client thread/INFO] [jei]: Building recipe registry...
+[14:31:29] [Client thread/INFO] [jei]: Building recipe registry took 1.087 s
+[14:31:29] [Client thread/INFO] [jei]: Building ingredient list...
+[14:31:29] [Client thread/INFO] [jei]: Building ingredient list took 21.08 ms
+[14:31:29] [Client thread/INFO] [jei]: Building ingredient filter...
+[14:31:29] [Client thread/INFO] [jei]: Building ingredient filter took 159.7 ms
+[14:31:29] [Client thread/INFO] [jei]: Building runtime...
+[14:31:29] [Client thread/INFO] [jei]: Building runtime took 54.23 ms
+[14:31:29] [Client thread/INFO] [jei]: Starting JEI took 4.163 s
+[14:31:29] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 21 mods
+[14:31:29] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[14:31:29] [Client thread/INFO] [com.mojang.text2speech.NarratorLinux]: Narrator library successfully loaded
+[14:31:31] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[14:31:35] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[14:31:35] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[14:31:35] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[14:31:35] [Server thread/INFO] [FML]: Applying holder lookups
+[14:31:35] [Server thread/INFO] [FML]: Holder lookups applied
+[14:31:35] [Server thread/INFO] [FML]: Loading dimension 0 (Test #2) (net.minecraft.server.integrated.IntegratedServer@79ac2900)
+[14:31:35] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 529 advancements
+[14:31:35] [Server thread/INFO] [FML]: Loading dimension -1 (Test #2) (net.minecraft.server.integrated.IntegratedServer@79ac2900)
+[14:31:35] [Server thread/INFO] [FML]: Loading dimension 1 (Test #2) (net.minecraft.server.integrated.IntegratedServer@79ac2900)
+[14:31:35] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[14:31:35] [Server thread/INFO] [EnderCore ASM]: Transforming Class [net.minecraft.world.chunk.storage.ExtendedBlockStorage], Method [isEmpty]
+[14:31:35] [Server thread/INFO] [EnderCore ASM]: Transforming net.minecraft.world.chunk.storage.ExtendedBlockStorage Finished.
+[14:31:36] [Server thread/INFO] [FML]: Unloading dimension -1
+[14:31:36] [Server thread/INFO] [FML]: Unloading dimension 1
+[14:31:36] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[14:31:37] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[14:31:37] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[14:31:37] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 21 mods : minecraft@1.12.2,enderiointegrationticlate@5.0.38,FML@8.0.99.99,theoneprobe@1.4.14,enderiointegrationforestry@5.0.38,enderiomachines@5.0.38,enderiobase@5.0.38,enderiointegrationtic@5.0.38,enderioconduitsappliedenergistics@5.0.38,redstoneflux@2.0.0,enderioconduitsopencomputers@5.0.38,mymod@0.0.1,jei@4.13.1.222,enderioconduitsrefinedstorage@5.0.38,enderiopowertools@5.0.38,intwheel@1.2.7,enderio@5.0.38,forge@14.23.5.2784,endercore@1.12.2-0.5.43,enderioconduits@5.0.38,mcp@9.42
+[14:31:37] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[14:31:37] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[14:31:37] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player214[local:E:31079950] logged in with entity id 259 at (-130.30000001192093, 74.0, 244.3409904663338)
+[14:31:37] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player214 joined the game
+[14:31:37] [Server thread/INFO] [EnderCore]: Sending server configs to client for com.enderio.core.common.config.ConfigHandler
+[14:31:39] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:31:39] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'Test #2'/overworld
+[14:31:39] [pool-2-thread-1/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@5b67e2b5[id=da075988-6245-3890-84d4-251ff8c86547,name=Player214,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:60) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:57) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4158) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:5147) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:5153) [guava-21.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:170) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3164) [Minecraft.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:138) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_191]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_191]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_191]
+[14:32:31] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:32:31] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'Test #2'/overworld
+[14:32:51] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[14:32:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[14:32:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[14:32:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[14:32:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'Test #2'/overworld
+[14:32:51] [Netty Local Client IO #0/INFO] [EnderCore]: Reset configs to client values for com.enderio.core.common.config.ConfigHandler
+[14:32:51] [Server thread/INFO] [FML]: Unloading dimension 0
+[14:32:51] [Server thread/INFO] [FML]: Applying holder lookups
+[14:32:51] [Server thread/INFO] [FML]: Holder lookups applied
+[14:32:51] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[14:32:51] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
