@@ -54,7 +54,7 @@ public class BlockFastFurnace extends Block implements ITileEntityProvider {
 
         //mymod:furnace
         setRegistryName(FAST_FURNACE);
-        setUnlocalizedName(MyMod.MODID + ".fast_furnace");
+        setTranslationKey(MyMod.MODID + ".fast_furnace");
         setHarvestLevel("pickaxe", 1);
         setCreativeTab(MyMod.creativeTab);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
@@ -193,7 +193,7 @@ public class BlockFastFurnace extends Block implements ITileEntityProvider {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.getFront(meta & 7));
+        return this.getDefaultState().withProperty(FACING, EnumFacing.byIndex(meta & 7));
     }
 
     @Override

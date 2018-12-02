@@ -1,9 +1,8 @@
 package mayus.mymod.furnace;
 
 import mayus.mymod.MyMod;
+import mayus.mymod.config.GeneralConfig;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
 
@@ -17,8 +16,6 @@ public class GuiFastFurnace extends GuiContainer
 
     private TileFastFurnace furnace;
 
-    private static final ResourceLocation background_off_0 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_0.png");
-    private static final ResourceLocation background_off_1 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_1.png");
     private static final ResourceLocation background_on_0_20 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_00-20.png");
     private static final ResourceLocation background_on_20_40 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_20-40.png");
     private static final ResourceLocation background_on_40_60 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_40-60.png");
@@ -37,14 +34,7 @@ public class GuiFastFurnace extends GuiContainer
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         int proz = (100 - ((furnace.getClientProgress() * 100) / 40));
-        if(furnace.getClientProgress() == 0) {
-            if(getRandomBoolean()) {
-                mc.getTextureManager().bindTexture(background_off_0);
-            } else {
-                mc.getTextureManager().bindTexture(background_off_1);
-            }
 
-        } else {
             if(proz <= 20) {
                 mc.getTextureManager().bindTexture(background_on_0_20);
             } else if(proz <= 40) {
@@ -57,11 +47,10 @@ public class GuiFastFurnace extends GuiContainer
                 mc.getTextureManager().bindTexture(background_on_80_100);
             }
 
-        }
 
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
-        int energyPercent = ((furnace.getClientEnergy() * 100) / TileFastFurnace.MAX_POWER);
+        int energyPercent = ((furnace.getClientEnergy() * 100) / GeneralConfig.MAX_POWER);
         drawEnergyBar(energyPercent);
         /*
         if (furnace.getClientProgress() > 0) {
