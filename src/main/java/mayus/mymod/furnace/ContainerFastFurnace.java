@@ -1,9 +1,10 @@
 package mayus.mymod.furnace;
 
 
+import mayus.mymod.config.FastFurnaceConfig;
 import mayus.mymod.network.Messages;
-import mayus.mymod.network.PacketSyncPower;
-import mayus.mymod.tools.IEnergyContainer;
+import mayus.mymod.network.PacketSyncMachineState;
+import mayus.mymod.tools.IMachineStateContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.Container;
@@ -14,14 +15,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import org.lwjgl.Sys;
 
-public class ContainerFastFurnace extends Container implements IEnergyContainer {
-
-    private static final int PROGRESS_ID = 0;
+public class ContainerFastFurnace extends Container implements IMachineStateContainer {
 
     private TileFastFurnace te;
 
+    private static final int PROGRESS_ID = 0;
 
     public ContainerFastFurnace(IInventory playerInventory, TileFastFurnace te) {
         this.te = te;
@@ -37,15 +36,15 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
         // Slots for the main inventory
         for (int row = 0; row < 3; ++row) {
             for (int col = 0; col < 9; ++col) {
-                int x = 9 + col * 18;
+                int x = 10 + col * 18;
                 int y = row * 18 + 70;
-                this.addSlotToContainer(new Slot(playerInventory, col + row * 9 + 10, x, y));
+                this.addSlotToContainer(new Slot(playerInventory, col + row * 9 + 9, x, y));
             }
         }
 
         // Slots for the hotbar
         for (int row = 0; row < 9; ++row) {
-            int x = 9 + row * 18;
+            int x = 10 + row * 18;
             int y = 58 + 70;
             this.addSlotToContainer(new Slot(playerInventory, row, x, y));
         }
@@ -53,19 +52,17 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
 
     private void addOwnSlots() {
         IItemHandler itemHandler = this.te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-        int x = 9;
+        int x = 10;
         int y = 26;
 
-        // Add our own slots
         int slotIndex = 0;
-
-        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x+= 18;
-        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x+= 18;
+        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x += 18;
+        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x += 18;
         addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y));
 
-        x = 117;
-        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x+= 18;
-        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x+= 18;
+        x = 118;
+        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x += 18;
+        addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y)); x += 18;
         addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, x, y));
     }
 
@@ -95,6 +92,7 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
 
         return itemstack;
     }
+
     @Override
     public boolean canInteractWith(EntityPlayer playerIn) {
         return te.canInteractWith(playerIn);
@@ -103,38 +101,26 @@ public class ContainerFastFurnace extends Container implements IEnergyContainer 
     @Override
     public void detectAndSendChanges() {
         super.detectAndSendChanges();
-        if(!te.getWorld().isRemote) {
-            if(te.getProgress() != te.getClientProgress()) {
+
+        if (!te.getWorld().isRemote) {
+            if (te.getProgress() != te.getClientProgress() || te.getEnergy() != te.getClientEnergy()) {
+                te.setClientEnergy(te.getEnergy());
                 te.setClientProgress(te.getProgress());
 
                 for (IContainerListener listener : listeners) {
-                    listener.sendWindowProperty(this, PROGRESS_ID, te.getProgress());
-                }
-            }
-
-            if(te.getEnergy() != te.getClientEnergy()) {
-                te.setClientEnergy(te.getEnergy());
-                for (IContainerListener listener : listeners) {
-                    if(listener instanceof EntityPlayerMP) {
+                    if (listener instanceof EntityPlayerMP) {
                         EntityPlayerMP player = (EntityPlayerMP) listener;
-                        Messages.INSTANCE.sendTo(new PacketSyncPower(te.getEnergy()), player);
-
+                        int pct = 100 - te.getProgress() * 100 / FastFurnaceConfig.MAX_PROGRESS;
+                        Messages.INSTANCE.sendTo(new PacketSyncMachineState(te.getEnergy(), pct), player);
                     }
                 }
             }
         }
-
     }
 
     @Override
-    public void updateProgressBar(int id, int data) {
-        if(id == PROGRESS_ID) {
-            te.setClientProgress(data);
-        }
-    }
-
-    @Override
-    public void syncPower(int energy) {
+    public void sync(int energy, int progress) {
         te.setClientEnergy(energy);
+        te.setClientProgress(progress);
     }
 }

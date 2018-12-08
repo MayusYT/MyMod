@@ -1,9 +1,13 @@
 package mayus.mymod.furnace;
 
 import mayus.mymod.config.FastFurnaceConfig;
+import mayus.mymod.tools.IGuiTile;
+import mayus.mymod.tools.IRestorableTileEntity;
 import mayus.mymod.tools.MyEnergyStorage;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
@@ -21,7 +25,7 @@ import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class TileFastFurnace extends TileEntity implements ITickable {
+public class TileFastFurnace extends TileEntity implements ITickable, IRestorableTileEntity, IGuiTile {
 
 
 
@@ -202,6 +206,7 @@ public class TileFastFurnace extends TileEntity implements ITickable {
 
     }
 
+    @Override
     public void readRestorableFromNBT(NBTTagCompound compound) {
         if(compound.hasKey("itemsIn")) {
             inputHandler.deserializeNBT((NBTTagCompound) compound.getTag("itemsIn"));
@@ -221,6 +226,7 @@ public class TileFastFurnace extends TileEntity implements ITickable {
         return compound;
     }
 
+    @Override
     public void writeRestorableToNBT(NBTTagCompound compound) {
         compound.setTag("itemsIn", inputHandler.serializeNBT());
         compound.setTag("itemsOut", outputHandler.serializeNBT());
@@ -277,4 +283,14 @@ public class TileFastFurnace extends TileEntity implements ITickable {
     }
 
     private MyEnergyStorage myEnergyStorage = new MyEnergyStorage(FastFurnaceConfig.MAX_POWER, FastFurnaceConfig.RF_PER_TICK_INPUT);
+
+    @Override
+    public Container createContainer(EntityPlayer player) {
+        return new ContainerFastFurnace(player.inventory, this);
+    }
+
+    @Override
+    public GuiContainer createGui(EntityPlayer player) {
+        return new GuiFastFurnace(this, new ContainerFastFurnace(player.inventory, this));
+    }
 }
