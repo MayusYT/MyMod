@@ -8,7 +8,6 @@ import net.minecraft.util.ResourceLocation;
 
 import java.util.Collections;
 
-
 public class GuiFastFurnace extends GuiContainer
 {
     public static final int WIDTH = 180;
@@ -21,6 +20,7 @@ public class GuiFastFurnace extends GuiContainer
     private static final ResourceLocation background_on_40_60 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_40-60.png");
     private static final ResourceLocation background_on_60_80 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_60-80.png");
     private static final ResourceLocation background_on_80_100 = new ResourceLocation(MyMod.MODID, "textures/gui/fast_furnace_burn_80-100.png");
+
 
     public GuiFastFurnace(TileFastFurnace tileEntity, ContainerFastFurnace container) {
         super(container);

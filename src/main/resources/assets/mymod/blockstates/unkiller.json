@@ -1,0 +1,27 @@
+
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "textures": {
+      "particle": "mymod:blocks/fast_furnace_off",
+      "all": "mymod:blocks/unkiller"
+    }
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}],
+    "stage": {
+      "0": {"textures": {"all": "mymod:blocks/unkiller"}},
+      "1": {"textures": {"all": "mymod:blocks/unkiller1"}},
+      "2": {"textures": {"all": "mymod:blocks/unkiller2"}},
+      "3": {"textures": {"all": "mymod:blocks/unkiller3"}},
+      "4": {"textures": {"all": "mymod:blocks/unkiller4"}},
+      "5": {"textures": {"all": "mymod:blocks/unkiller5"}},
+      "6": {"textures": {"all": "mymod:blocks/unkiller6"}},
+      "7": {"textures": {"all": "mymod:blocks/unkiller7"}},
+      "8": {"textures": {"all": "mymod:blocks/unkiller8"}},
+      "9": {"textures": {"all": "mymod:blocks/unkiller9"}}
+    }
+  }
+}

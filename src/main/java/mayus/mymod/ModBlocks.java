@@ -5,6 +5,8 @@ import mayus.mymod.furnace.TileFastFurnace;
 import mayus.mymod.generator.BlockGenerator;
 import mayus.mymod.generator.TileGenerator;
 import mayus.mymod.santaHat.BlockSantaHat;
+import mayus.mymod.unkiller.BlockUnkiller;
+import mayus.mymod.unkiller.TileUnkiller;
 import mayus.mymod.worldgen.BlockFancyOre;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -27,6 +29,9 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("mymod:santahat")
     public static BlockSantaHat blockSantaHat;
 
+    @GameRegistry.ObjectHolder("mymod:unkiller")
+    public static BlockUnkiller blockUnkiller;
+
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
@@ -34,6 +39,7 @@ public class ModBlocks {
         blockGenerator.initModel();
         blockFancyOre.initModel();
         blockSantaHat.initModel();
+        blockUnkiller.initModel();
     }
 
     public static void register(IForgeRegistry<Block> registry) {
@@ -42,6 +48,9 @@ public class ModBlocks {
 
         registry.register(new BlockGenerator());
         GameRegistry.registerTileEntity(TileGenerator.class, MyMod.MODID + "_generator");
+
+        registry.register(new BlockUnkiller());
+        GameRegistry.registerTileEntity(TileUnkiller.class, MyMod.MODID + "_unkiller");
 
         registry.register(new BlockFancyOre());
         registry.register(new BlockSantaHat());
